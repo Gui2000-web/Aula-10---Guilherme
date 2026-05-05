@@ -7,10 +7,10 @@ try:
 
    media_por_funcionario = total_produzido / funcionarios
    print(f'Média por funcionário: {media_por_funcionario:.2f}')
-except ValueError:
-   print('Informe um número.')
-except ZeroDivisionError:
-   print('Funcionário não pode ser zero')
+
+
+except Exception as e:
+   print(f'Ops! Erros nos valores de entrada {e}')
 except KeyboardInterrupt:
    print('Operação cancelada pelo usuário')
 else:
@@ -19,3 +19,5 @@ else:
 # Executa sempre. Com erro ou não, o bloco finally sempre irá executar
 finally:
    print('Programa encerrado!')
+
+
